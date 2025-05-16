@@ -11,7 +11,6 @@ body{
     width: 100%;
     max-width: 1440px;
     height: 100px;
-    /* Change it to #FFFFFF */
     background-color: #ffffff; 
     display: flex;
     justify-content: center;
@@ -19,20 +18,18 @@ body{
 }
 
 #nav-item{
-    /* Change it to #FFFFFF */
     background-color: #FFFFFF;
     width: 1286px;
     height: 41px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }   
 
 #logo {
     display: flex;
     align-items: center;
-    gap: 5px;              /* Space between logo and text */
+    gap: 5px;              
     padding-left: 54px;
     width: fit-content;
     height: 41px;
@@ -40,7 +37,7 @@ body{
 }
 
 #logo img {
-    width: 80px;            /* Adjust logo image size */
+    width: 80px;            
     height: 80px;
     object-fit: contain;
 }
@@ -49,7 +46,7 @@ body{
     font-size: 34px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #333;            /* Choose a good contrasting color */
+    color: #333;           
     margin: 0;
 }
 
@@ -75,7 +72,7 @@ body{
     transition: color 0.3s ease;
 }
 #links li:hover {
-    color: #B88E2F; /* Tomato color on hover */
+    color: #B88E2F; 
 }
 
 #icons{
@@ -131,8 +128,6 @@ body{
 
 #content b {
     font-size: 48px;
-    /* height: 72px;
-    width: 124px; */
     color: #000000;
 }
 
@@ -143,21 +138,32 @@ body{
 }
 
 #products {
+    width: 100%; 
+    height: 777px;
     padding: 40px;
+    margin: 0; 
+    background-color: #fff;
 }
 
 #cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    width: 100%; 
+    height: 2034px; 
+    margin: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px 32px;
+    box-sizing: border-box;
 }
 
 .card {
+    width: 285px; 
+    height: 446px; 
     background-color: #F4F5F7;
     overflow: hidden;
-    font-family: 'Poppins';
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     position: relative;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .card-photo {
@@ -167,9 +173,34 @@ body{
 }
 
 .card-photo img {
-    width: 100%;
-    height: auto;
+    width: 285px;
+    height: 301px;
     display: block;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag.red {
+    background-color: #E97171;
+}
+
+.tag.green {
+    background-color: #2EC1AC;
 }
 
 .card-content {
@@ -203,32 +234,28 @@ body{
     font-size: 16px;
 }
 
-/* Tag on top right of image */
-.tag {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 50%;
-    color: #fff;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* overylayyyyyyyyyyyyyy */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 58, 58, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.tag.red {
-    background-color: #E97171;
+.card-photo:hover .overlay {
+  opacity: 1;
 }
 
-.tag.green {
-    background-color: #2EC1AC;
-}
-
-.card:hover{
-    background-color: #646464;
-    color: #FFFFFF;
+.overlay .text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
