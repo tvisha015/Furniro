@@ -250,12 +250,59 @@ body{
   transition: opacity 0.3s ease;
 }
 
-.card-photo:hover .overlay {
+.card:hover .overlay {
   opacity: 1;
 }
 
 .overlay .text {
-  color: white;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.button button {
+  height: 48px;
+  width: 202px;
+  size: 16px;
+  background-color: #fff;
+  color: #B88E2F;
+  border: none;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 12px 52px 12px 59px;
+}
+.button p{
+    font-size: 16px;
+}
+.button button:hover {
+  background-color: #f0f0f0;
+}
+
+.items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.items ul li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.items ul li:hover {
+  transform: scale(1.1);
+}
+
+.items ul li img {
+  width: 20px;
+  height: 20px;
 }
