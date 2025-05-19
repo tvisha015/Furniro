@@ -27,10 +27,10 @@
                 
             <div id="icons">
                 <ul>
-                    <li><img src="./assets/profile.png" alt="profile"></li>
-                    <li><img src="./assets/search.png" alt="search"></li>
-                    <li><img src="./assets/heart.png" alt="wishlist"></li>
-                    <li><img src="./assets/shopping-cart.png" alt="cart"></li>
+                    <li><img src="./assets/profile.svg" alt="profile"></li>
+                    <li><img src="./assets/search.svg" alt="search"></li>
+                    <li><img src="./assets/heart.svg" alt="wishlist"></li>
+                    <li><img src="./assets/cart.svg" alt="cart"></li>
                 </ul>
             </div>
         </div>
@@ -41,6 +41,29 @@
         <div id="content">
             <b>Shop</b>
             <pre>Home   >   Shop</pre>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="left-tools">
+            <button class="filter-btn"><img src="assets/filter.svg" alt="filter btn"><P>Filter</P></button>
+            <div class="view-toggle">
+                <img src="assets/grid.svg" alt="Grid View">
+                <img src="assets/list.svg" alt="List View">
+                <img src="assets/Line 5.svg" alt="Divider" class="divider-svg">
+            </div>
+            <span class="results">Showing 1–16 of 32 results</span>
+        </div>
+        <div class="right-tools">
+            <label>Show</label>
+            <input type="number" value="16" class="show-input">
+            <label>Short by</label>
+            <select class="sort-select">
+                <option value="default">Default</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+                <option value="newest">Newest</option>
+            </select>
         </div>
     </div>
 
