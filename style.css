@@ -7,6 +7,7 @@
 body{
     font-family: "Poppins", sans-serif;
 }
+/* navbar */
 #navbar{
     width: 100%;
     max-width: 1440px;
@@ -49,7 +50,6 @@ body{
     color: #333;           
     margin: 0;
 }
-
 
 #links{
     display: flex;
@@ -102,6 +102,7 @@ body{
     transform: scale(1.1);  
 }
 
+/* shop-bg */
 #shop-bg {
     position: relative;
     width: 100%;
@@ -136,19 +137,16 @@ body{
     margin-top: 10px;
     color: #000000;
 }
-
+/* products */
 #products {
-    width: 100%; 
-    height: 777px;
+    width: 100%;
     padding: 40px;
-    margin: 0; 
+    margin: 0;
     background-color: #fff;
+    box-sizing: border-box;
 }
 
 #cards {
-    width: 100%; 
-    height: 2034px; 
-    margin: 17px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -157,14 +155,18 @@ body{
 }
 
 .card {
-    width: 285px; 
-    height: 446px; 
+    flex: 0 1 calc(25% - 24px); /* 4 cards per row, accounting for gap */
+    max-width: 285px;
+    min-width: 200px; /* prevents card from becoming too small */
+    height: 446px;
     background-color: #F4F5F7;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     position: relative;
     transition: background-color 0.3s, color 0.3s;
 }
+
+/* rest of your CSS remains the same: */
 
 .card-photo {
     position: relative;
@@ -173,7 +175,7 @@ body{
 }
 
 .card-photo img {
-    width: 285px;
+    width: 100%;
     height: 301px;
     display: block;
     object-fit: cover;
@@ -234,77 +236,77 @@ body{
     font-size: 16px;
 }
 
-/* overylayyyyyyyyyyyyyy */
-
 .overlay {
-  position: absolute;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
-  height: 0;
-  background: rgba(58, 58, 58, 0.72);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .5s ease;
-  overflow: hidden;
+    height: 0;
+    background: rgba(58, 58, 58, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    overflow: hidden;
 }
 
 .card:hover .overlay {
-  height: 100%;
+    height: 100%;
 }
 
 .overlay .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .button button {
-  height: 48px;
-  width: 202px;
-  size: 16px;
-  background-color: #fff;
-  color: #B88E2F;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 12px 52px 12px 59px;
+    height: 48px;
+    width: 202px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #B88E2F;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 12px 52px 12px 59px;
 }
-.button p{
+
+.button p {
     font-size: 16px;
 }
+
 .button button:hover {
-  background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .items ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .items ul li {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .items ul li:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .items ul li img {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 /* toolbarrr*/
@@ -382,4 +384,97 @@ body{
 
 .right-tools label{
     font-size: 20px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: 10px;
+}
+
+.page-btn {
+  background-color: rgba(249, 241, 231, 1);
+  border: none;
+  color: #333;
+  padding: 10px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+.page-btn.active {
+  background-color: rgba(184, 142, 47, 1);
+  color: rgba(255, 255, 255, 1);
+  border-color: #333;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* info */
+.info {
+    height: 270px;
+    width: 100%;
+    background-color: #FAF3EA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.info-items {
+    width: calc(100% - 106px);
+    background-color: #FAF3EA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 0 15px; 
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    flex: 1; 
+    min-width: 0; 
+}
+
+.item img {
+    height: 50px; 
+    width: 50px;
+    flex-shrink: 0; 
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item h4 {
+    font-weight: 600;
+    font-size: 18px; 
+    margin: 0;
+    color: #242424;
+}
+
+.item p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #898989;
+    margin: 4px 0 0 0;
+    line-height: 1.2;
 }
