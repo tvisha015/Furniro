@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="navbar">
+    <header class="custom_container">
+        <div id="navbar">
         <div id="nav-item">
 
             <div id="logo">
@@ -34,17 +35,21 @@
                 </ul>
             </div>
         </div>
-    </div>
-
-    <div id="shop-bg">
+        </div>
+    </header>
+    
+    <section class="custom_container">
+        <div id="shop-bg">
         <img src="./assets/shop-bg.png" alt="shop backgroung image">
         <div id="content">
             <b>Shop</b>
             <pre>Home   >   Shop</pre>
         </div>
-    </div>
+        </div>
+    </section>
 
-    <div class="toolbar">
+    <section class="custom_container">
+        <div class="toolbar">
         <div class="left-tools">
             <button class="filter-btn"><img src="assets/filter.svg" alt="filter btn"><P>Filter</P></button>
             <div class="view-toggle">
@@ -65,9 +70,11 @@
                 <option value="newest">Newest</option>
             </select>
         </div>
-    </div>
-
-    <div id="products">
+        </div>
+    </section>
+    
+    <section class="custom_container">
+        <div id="products">
         <div id="cards">
             <!-- 1 -->
             <div class="card">
@@ -533,8 +540,10 @@
             <button class="page-btn">Next</button>
         </div>
     </div>
-
-    <div class="info">
+    </section>
+    
+    <section class="custom_container">
+        <div class="info">
         <div class="info-items">
             <div class="item">
                 <img src="assets/trophy.svg" alt="trophie">
@@ -566,5 +575,47 @@
             </div>
         </div>
     </div>
+    </section>
+    
+    <section class="custom_container">
+        <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2 class="brand">Funiro.</h2>
+                <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+            </div>
+            <div class="footer-column">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter Your Email Address" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <hr style="border: none; border-top: 1px solid #D9D9D9; margin: 48px 0 35px 0;">
+        <div class="footer-bottom">
+            <p>2023 funiro. All rights reserved</p>
+        </div>
+        </footer>
+    </section>
+    
+
 </body>
 </html>

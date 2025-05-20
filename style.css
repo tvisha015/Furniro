@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.custom_container{
+    max-width: 1236px;
+    margin: 0 auto;
+    width: 96%;
+}
 body{
     font-family: "Poppins", sans-serif;
 }
@@ -153,11 +158,11 @@ body{
     gap: 40px 32px;
     box-sizing: border-box;
 }
-
+/* alt+shift+downkey */
 .card {
-    flex: 0 1 calc(25% - 24px); /* 4 cards per row, accounting for gap */
+    flex: 0 1 calc(25% - 24px); 
     max-width: 285px;
-    min-width: 200px; /* prevents card from becoming too small */
+    min-width: 200px; 
     height: 446px;
     background-color: #F4F5F7;
     overflow: hidden;
@@ -165,8 +170,6 @@ body{
     position: relative;
     transition: background-color 0.3s, color 0.3s;
 }
-
-/* rest of your CSS remains the same: */
 
 .card-photo {
     position: relative;
@@ -477,4 +480,86 @@ body{
     color: #898989;
     margin: 4px 0 0 0;
     line-height: 1.2;
+}
+
+/* footer */
+.footer {
+  background: #FFFFFF;
+  color: #000;
+  border-top: 1px solid #eaeaea;
+  padding: 48px 100px 38px 100px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h2.brand {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.footer-column p{
+    color: #9F9F9F;
+    font-size: 16px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #9F9F9F;
+  margin-bottom: 28px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.newsletter-form button {
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: left;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #000000;
+  font-size: 16px;
 }
