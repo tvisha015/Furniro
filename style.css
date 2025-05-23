@@ -998,12 +998,16 @@ header{
     gap: 10px;
   }
 
-  .banner_btm .custom_container .toolbar .left-tools, .right-tools {
+  .banner_btm .custom_container .toolbar .left-tools, 
+  .banner_btm .custom_container .toolbar .right-tools {
     width: 100%;
     flex-direction: row;
     align-items: stretch;
     gap: 6px;
     justify-content: space-between;
+  }
+  .banner_btm .custom_container .toolbar .right-tools {
+    justify-content: center;
   }
 
   .banner_btm .custom_container .toolbar .left-tools .filter-btn {
@@ -1025,10 +1029,13 @@ header{
 
   .banner_btm .custom_container .toolbar .right-tools .sort-select, 
   .banner_btm .custom_container .toolbar .right-tools .show-input {
-    width: 100%;
+    width: 80%;
     font-size: 13px;
   }
-
+  .banner_btm .custom_container .toolbar .right-tools .sort-select{
+    text-align: center;
+  } 
+  
   .banner_btm .custom_container .toolbar .left-tools .view-toggle img {
     margin-left: 6px;
     width: 18px;
